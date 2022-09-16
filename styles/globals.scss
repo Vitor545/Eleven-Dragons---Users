@@ -1,0 +1,50 @@
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  background: $backgroud-color;
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3 {
+  line-height: 90%;
+}
+
+h1 {
+  font-size: 64px;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  color: $primary-gray;
+}
