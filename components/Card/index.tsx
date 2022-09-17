@@ -9,16 +9,22 @@ export type statusType = {
 
 export default function Text({name, email, status}: IUser) {
   const status_verify: statusType = { inactive: 'INATIVO', active: 'ATIVO' }
-  const status_user: string = `status_${status}`
+  const statusUser: string = `status_${status}`
+  const randomColor: string = `rgba(${Math.random() * 100}, ${Math.random() * 100}, ${Math.random() * 100})`
 
   return (
     <div className={style.card}>
       <div className={style.card_status}>
-        <div className={style[status_user]}></div>
+        <div className={style[statusUser]}></div>
         <span>{status_verify[status]}</span>
       </div>
       <div className={style.card_body}>
-        <div className={style.card_photo}>{name[0].toUpperCase()}</div>
+        <div
+          className={style.card_photo}
+          style={{backgroundColor: randomColor}}
+        >
+          {name[0].toUpperCase()}
+        </div>
         <h3 className={style.card_name}>{name}</h3>
         <p className={style.card_email}>{email}</p>
       </div>
