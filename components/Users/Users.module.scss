@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.users_status {
+  padding-bottom: 64px;
+  padding-top: 16px;
+  
+  a {
+    margin-left: 24px;
+    border: 1px solid $white;
+    padding: 6px 12px;
+    border-radius: 10rem;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .status_button_active {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}

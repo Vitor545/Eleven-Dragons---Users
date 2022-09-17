@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+.card {
+  width: 212px;
+  height: 290px;
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid $white;
+}
+
+.card_status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  span {
+    font-size: 0.5rem;
+    line-height: 90%;
+    margin-left: 0.5rem;
+  }
+}
+
+.card_photo {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: red;
+  font-weight: 700;
+  line-height: 90%;
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.card_name {
+  max-width: 158px;
+  text-align: center;
+}
+
+.card_email {
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 158px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+
+.card_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status_active {
+  background: $active-color;
+}
+
+.status_inactive {
+  background: $inactive-color;
+}
