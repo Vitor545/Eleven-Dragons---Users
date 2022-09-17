@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "types/custom/image-svg.d.ts",
+    "types/custom/image-png.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/test/*.spec.tsx"
+  ]
 }
