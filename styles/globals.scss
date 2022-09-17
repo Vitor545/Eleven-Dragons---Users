@@ -54,3 +54,10 @@ p {
   margin: 0 auto;
   padding: 1rem;
 }
+
+.btn {
+  background-color: $primary-color;
+  padding: 1.125rem 3.875rem;
+  color: $white;
+  border-radius: 0.25rem;
+}
