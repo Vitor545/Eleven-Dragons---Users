@@ -110,3 +110,16 @@ input[type=radio]:checked + label.btn_radio{
   border: none;
 }
  
+
+::-webkit-scrollbar {
+  width: 8px;            
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;       
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;    
+  border-radius: 20px;       
+}
