@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from '../Header'
 import Hero from '../Hero'
 import TextInfinite from "../TextInfinite";
+import FormCreate from "../FormCreate";
 
 export default function CreateUserPage() {
 
@@ -15,6 +16,7 @@ export default function CreateUserPage() {
       <Header typeButton={'Início'}/>
       <Hero />
       <TextInfinite />
+      <FormCreate />
       
     </>
   )

@@ -60,4 +60,52 @@ p {
   padding: 1.125rem 3.875rem;
   color: $white;
   border-radius: 0.25rem;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+  }
 }
+
+.error_input{
+  border: 1px solid $error-color !important;
+}
+
+.sucess_input{
+  border: 1px solid $sucess-color !important;
+}
+
+input[type=radio] {
+  display:none;
+}
+ 
+input[type=radio] + label.btn_radio{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  border: 1px solid $primary-gray;
+  color: $primary-gray;
+  width: 50%;
+  height: 48px;
+
+  &:nth-child(2) {
+    border-radius: 4px 0 0 4px;
+    border-right: 0.5px solid $primary-gray;
+  }
+
+  &:nth-child(4) {
+    border-radius: 0 4px 4px 0;
+    border-left: 0.5px solid $primary-gray;
+  }
+}
+ 
+input[type=radio]:checked + label.btn_radio{
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+}
+ 
