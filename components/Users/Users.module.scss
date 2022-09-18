@@ -32,3 +32,17 @@
   flex-wrap: wrap;
   gap: 30px;
 }
+
+@media screen and (max-width: 955px) {
+  .users_status {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 36px;
+    padding-top: 16px;
+  
+  a {
+    margin-left: 16px;
+    padding: 4px 8px;
+  }
+  }
+}
