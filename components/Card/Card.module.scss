@@ -7,6 +7,11 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
   border: 1px solid $white;
+  transition: 0.5s ease;
+
+  &:hover {
+    transform: translate(10px, -10px);
+  }
 }
 
 .card_status {
@@ -48,8 +53,13 @@
 .card_email {
   font-weight: 300;
   font-size: 14px;
+  display: -webkit-box;
   max-width: 158px;
-  white-space: nowrap;
+  white-space: wrap;
+  word-break: break-all;
+  text-align: center;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 10px;
