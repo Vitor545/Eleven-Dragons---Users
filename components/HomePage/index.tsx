@@ -9,6 +9,8 @@ import { RootState } from "../../store";
 import { asyncGetUsers } from '../../store/Users.store';
 import Loading from '../Loading.tsx'
 import IUser from "../../types/User.interface";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function HomePage() {
   const dispatch = useDispatch()
@@ -45,6 +47,17 @@ export default function HomePage() {
       <Hero />
       <TextInfinite />
       <Users users={isSearch ? userFilter : users}/>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+      />
     </>
   )
 }

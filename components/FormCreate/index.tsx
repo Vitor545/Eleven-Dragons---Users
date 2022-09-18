@@ -5,8 +5,6 @@ import Joi from 'joi'
 import tlds from 'tlds'
 import {toast} from 'react-toastify';
 import { useDispatch } from 'react-redux'
-import { addUsers } from '../../store/Users.store'
-import IUser from '../../types/User.interface'
 
 const regexName: any = /^[a-zA-Z\d_]+$/
 
@@ -25,7 +23,6 @@ const schemaName = Joi.object({
 })
 
 export default function FormCreate() {
-  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [status, setStatus] = useState<boolean>()
@@ -108,7 +105,10 @@ export default function FormCreate() {
 			progress: undefined,
 		});
 
-    return dispatch(addUsers({name, email, status} as IUser))
+    const peopleExists = localStorage.getItem('people');
+    const dateExists = peopleExists === null ? [] : JSON.parse(peopleExists);
+    dateExists.push({name, email, status})
+    localStorage.setItem('people', JSON.stringify(dateExists));
   }
 
   const isClick = (e: any) => {
