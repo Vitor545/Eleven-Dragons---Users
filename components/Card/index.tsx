@@ -8,7 +8,7 @@ export type statusType = {
 }
 
 export default function Text({name, email, status}: IUser) {
-  const status_verify: statusType = { inactive: 'INATIVO', active: 'ATIVO' }
+  const status_verify: statusType = { inactive: 'INATIVO', active: 'ATIVO', false: 'INATIVO', true: 'ATIVO' }
   const statusUser: string = `status_${status}`
   const randomColor: string = `rgba(${Math.random() * 100}, ${Math.random() * 100}, ${Math.random() * 100})`
 
@@ -16,7 +16,7 @@ export default function Text({name, email, status}: IUser) {
     <div className={style.card}>
       <div className={style.card_status}>
         <div className={style[statusUser]}></div>
-        <span>{status_verify[status]}</span>
+        <span>{status_verify[status as any]}</span>
       </div>
       <div className={style.card_body}>
         <div

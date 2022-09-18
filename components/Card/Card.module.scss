@@ -71,10 +71,10 @@
   align-items: center;
 }
 
-.status_active {
+.status_active, .status_true {
   background: $active-color;
 }
 
-.status_inactive {
+.status_inactive, .status_false  {
   background: $inactive-color;
 }

@@ -89,6 +89,7 @@ input[type=radio] + label.btn_radio{
   margin-bottom: 0;
   border: 1px solid $primary-gray;
   color: $primary-gray;
+  cursor: pointer;
   width: 50%;
   height: 48px;
 

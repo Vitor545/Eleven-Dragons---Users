@@ -7,13 +7,14 @@ const users = createSlice({
 	name: 'users',
 	initialState: {
 		users: [] as IUser[],
+		created: [] as IUser[],
 	},
 	reducers: {
 		getUsers(state, action: PayloadAction<IUser[]>) {
-			state.users = action.payload;
+			state.users = [...state.created, ...action.payload];
 		},
 		addUsers(state, action: PayloadAction<IUser>) {
-			state.users = [...state.users, action.payload];
+			state.created = [...state.created, action.payload];
 		}
 	},
 });

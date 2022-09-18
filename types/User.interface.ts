@@ -1,7 +1,7 @@
 export default interface IUser {
   id?: number;
   name: string;
-  gender: string;
+  gender?: string;
   email: string;
-  status: string;
+  status: string | boolean;
 }

@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import style from './Header.module.scss'
 
 export type HeaderProps = {
@@ -6,7 +7,13 @@ export type HeaderProps = {
 }
 
 export default function Header({ onChange, typeButton = 'Criar Usuário'}: HeaderProps) {
-
+  const onClick = () => {
+    if(typeButton === 'Criar Usuário') {
+      Router.push('/create')
+    } else {
+      Router.push('/')
+    }
+  }
   return (
     <header className={style.header}>
       <div className={`container ${style.header__container}`}>
@@ -17,7 +24,7 @@ export default function Header({ onChange, typeButton = 'Criar Usuário'}: Heade
         {onChange && (<div className={style.header_search}>
           <input type="text" onChange={(e) => onChange(e.target.value)} placeholder="Quem você está procurando?"/>
         </div>)}
-        <a className={style.header_button}>{typeButton}</a>
+        <a className={style.header_button} onClick={onClick}>{typeButton}</a>
       </div>
     </header>
   )

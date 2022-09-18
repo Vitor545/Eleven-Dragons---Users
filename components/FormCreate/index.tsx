@@ -3,6 +3,10 @@ import HeroCreate from '../HeroCreate'
 import style from './FormCreate.module.scss'
 import Joi from 'joi'
 import tlds from 'tlds'
+import {toast} from 'react-toastify';
+import { useDispatch } from 'react-redux'
+import { addUsers } from '../../store/Users.store'
+import IUser from '../../types/User.interface'
 
 const regexName: any = /^[a-zA-Z\d_]+$/
 
@@ -21,6 +25,7 @@ const schemaName = Joi.object({
 })
 
 export default function FormCreate() {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [status, setStatus] = useState<boolean>()
@@ -77,10 +82,33 @@ export default function FormCreate() {
 
   const onClick = () => {
     validaStyleStatus()
+    validaStyleEmail(email)
+    validaStyleName(name)
     if (validationErrorEmail || validationErrorName || validationErrorStatus) {
+        toast.error('Corrija os erros antes de enviar!', {
+          position: 'top-right',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          theme: 'dark',
+          draggable: true,
+          progress: undefined,
+        });
       return
     }
-    console.log('CERTO: ', email, name, status)
+    toast.success('Usuário Criado com Sucesso!', {
+			position: 'top-right',
+			autoClose: 2000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: false,
+      theme: 'dark',
+			draggable: true,
+			progress: undefined,
+		});
+
+    return dispatch(addUsers({name, email, status} as IUser))
   }
 
   const isClick = (e: any) => {
