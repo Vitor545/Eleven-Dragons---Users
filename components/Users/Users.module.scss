@@ -12,12 +12,15 @@
     font-weight: 700;
     font-size: 12px;
     cursor: pointer;
-    background-color: transparent;
   }
 
   .status_button_active {
     background-color: $primary-color;
     border-color: $primary-color;
+  }
+
+  .status_button_inactive {
+    background-color: transparent;
   }
 
   

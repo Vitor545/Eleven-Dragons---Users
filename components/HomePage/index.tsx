@@ -7,19 +7,25 @@ import TextInfinite from "../TextInfinite";
 import Users from "../Users";
 import { RootState } from "../../store";
 import { asyncGetUsers } from '../../store/Users.store';
+import Loading from '../Loading.tsx'
+import IUser from "../../types/User.interface";
 
 export default function HomePage() {
   const dispatch = useDispatch()
   const {users} = useSelector((state: RootState) => state.users)
   const [isSearch, setIsSearch] = useState(false)
-  const [userFilter, setUserFilter] = useState([])
+  const [userFilter, setUserFilter] = useState<IUser[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const getUsers = () => dispatch(asyncGetUsers())
     getUsers()
+    setIsLoading(false)
   }, [])
 
-  console.log(isSearch)
+  if(isLoading) {
+    return <Loading />
+  }
 
   return (
     <>

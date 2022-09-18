@@ -7,24 +7,57 @@ export type UserProps = {
   users: IUser[]
 }
 
-export default function Users({users}: UserProps) {
+export type isSearchTrueType = {
+  false: IUser[]
+  inactive: IUser[]
+  active: IUser[]
+  [key: string]: IUser[]
+}
+
+export default function Users({ users }: UserProps) {
   const [isActive, setIsActive] = useState(false)
   const [isInactive, setIsInactive] = useState(false)
-  const status_button: string = 'status_button_active'
+  const [isSearch, setIsSearch] = useState('false')
+
+  const filterUsersActive = users.filter((user) => user.status === 'active')
+  const filterUsersInactive = users.filter((user) => user.status === 'inactive')
+  const typeButton = [
+    { label: 'ATIVO', status: isActive, type: 'active' },
+    { label: 'INATIVO', status: isInactive, type: 'inactive' },
+  ]
+  const isSearchTrue: isSearchTrueType = {
+    false: users,
+    inactive: filterUsersInactive,
+    active: filterUsersActive,
+  }
+  const usersArray = isSearchTrue[isSearch].map((user: IUser) => (
+    <Card
+      name={user.name}
+      gender={user.gender}
+      email={user.email}
+      status={user.status}
+      key={user.id}
+    />
+  ))
 
   const onClick = (type: string) => {
-    if(type === 'active') {
-      if(isActive) {
+    if (type === 'active') {
+      if (isActive) {
         setIsActive(false)
+        setIsSearch('false')
       } else {
         setIsActive(true)
+        setIsSearch('active')
         setIsInactive(false)
       }
-    } else {
-      if(isInactive) {
+    }
+    if (type === 'inactive') {
+      if (isInactive) {
         setIsInactive(false)
+        setIsSearch('false')
       } else {
         setIsInactive(true)
+        setIsSearch('inactive')
         setIsActive(false)
       }
     }
@@ -35,20 +68,19 @@ export default function Users({users}: UserProps) {
       <div className="container">
         <div className={style.users_status}>
           <span>Filtrar por:</span>
-          <a className={isActive && `${style[status_button]}`} onClick={() => onClick('active')}>ATIVO</a>
-          <a className={isInactive && `${style[status_button]}`} onClick={() => onClick('inactive')}>INATIVO</a>
-        </div>
-        <div className={style.card_container}>
-          {users.map((user: IUser) => (
-            <Card
-              name={user.name}
-              gender={user.gender}
-              email={user.email}
-              status={user.status}
-              key={user.id}
-            />
+          {typeButton.map((type) => (
+            <a
+              className={
+                type.status ? `${style.status_button_active}` : `${style.status_button_inactive}`
+              }
+              key={type.label}
+              onClick={() => onClick(type.type)}
+            >
+              {type.label}
+            </a>
           ))}
         </div>
+        <div className={style.card_container}>{usersArray}</div>
       </div>
     </section>
   )

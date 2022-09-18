@@ -1,8 +1,15 @@
 import style from './Header.module.scss'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
+import { Dispatch, SetStateAction } from 'react';
+import IUser from '../../types/User.interface';
 
-export default function Header({setIsSearch, setUserFilter}) {
+export type HeaderProps = {
+  setIsSearch: Dispatch<SetStateAction<boolean>>
+  setUserFilter: Dispatch<SetStateAction<IUser[]>>
+}
+
+export default function Header({setIsSearch, setUserFilter}: HeaderProps) {
   const {users} = useSelector((state: RootState) => state.users)
 
   const onChange = (value: string ) => {
