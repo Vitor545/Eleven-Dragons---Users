@@ -52,7 +52,7 @@ export default function Header({ onChange, typeButton = 'Criar Usuário' }: Head
         </div>
         <div
           className={`${style.header_content} ${style.header_justify}`}
-          style={{ justifyContent: (typeButton === 'Início' ? 'flex-end' : 'space-around') }}
+          style={{ justifyContent: typeButton === 'Início' ? 'flex-end' : 'space-around' }}
         >
           {onChange && (
             <div className={style.header_search}>

@@ -3,7 +3,7 @@ import HeroCreate from '../HeroCreate'
 import style from './FormCreate.module.scss'
 import Joi from 'joi'
 import tlds from 'tlds'
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify'
 import { useDispatch } from 'react-redux'
 
 const regexName: any = /^[a-zA-Z\d_]+$/
@@ -82,33 +82,33 @@ export default function FormCreate() {
     validaStyleEmail(email)
     validaStyleName(name)
     if (validationErrorEmail || validationErrorName || validationErrorStatus) {
-        toast.error('Corrija os erros antes de enviar!', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          theme: 'dark',
-          draggable: true,
-          progress: undefined,
-        });
+      toast.error('Corrija os erros antes de enviar!', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        theme: 'dark',
+        draggable: true,
+        progress: undefined,
+      })
       return
     }
     toast.success('Usuário Criado com Sucesso!', {
-			position: 'top-right',
-			autoClose: 2000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: false,
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
       theme: 'dark',
-			draggable: true,
-			progress: undefined,
-		});
+      draggable: true,
+      progress: undefined,
+    })
 
-    const peopleExists = localStorage.getItem('people');
-    const dateExists = peopleExists === null ? [] : JSON.parse(peopleExists);
-    dateExists.push({name, email, status})
-    localStorage.setItem('people', JSON.stringify(dateExists));
+    const peopleExists = localStorage.getItem('people')
+    const dateExists = peopleExists === null ? [] : JSON.parse(peopleExists)
+    dateExists.push({ name, email, status })
+    localStorage.setItem('people', JSON.stringify(dateExists))
   }
 
   const isClick = (e: any) => {

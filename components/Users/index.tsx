@@ -20,7 +20,9 @@ export default function Users({ users }: UserProps) {
   const [isSearch, setIsSearch] = useState('false')
 
   const filterUsersActive = users.filter((user) => user.status === 'active' || user.status === true)
-  const filterUsersInactive = users.filter((user) => user.status === 'inactive' || user.status === false)
+  const filterUsersInactive = users.filter(
+    (user) => user.status === 'inactive' || user.status === false
+  )
   const typeButton = [
     { label: 'ATIVO', status: isActive, type: 'active' },
     { label: 'INATIVO', status: isInactive, type: 'inactive' },

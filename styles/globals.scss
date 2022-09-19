@@ -25,7 +25,9 @@ button {
   outline: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 90%;
 }
 
@@ -69,19 +71,19 @@ p {
   }
 }
 
-.error_input{
-  border: 1px solid $error-color !important;
+.error_input {
+  border: 1px solid $error-color  !important;
 }
 
-.sucess_input{
-  border: 1px solid $sucess-color !important;
+.sucess_input {
+  border: 1px solid $sucess-color  !important;
 }
 
 input[type=radio] {
-  display:none;
+  display: none;
 }
- 
-input[type=radio] + label.btn_radio{
+
+input[type=radio]+label.btn_radio {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -103,23 +105,23 @@ input[type=radio] + label.btn_radio{
     border-left: 0.5px solid $primary-gray;
   }
 }
- 
-input[type=radio]:checked + label.btn_radio{
+
+input[type=radio]:checked+label.btn_radio {
   background-color: $primary-color;
   color: $white;
   border: none;
 }
- 
+
 
 ::-webkit-scrollbar {
-  width: 8px;            
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;       
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $primary-color;    
-  border-radius: 20px;       
+  background-color: $primary-color;
+  border-radius: 20px;
 }
