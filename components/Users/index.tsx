@@ -72,6 +72,7 @@ export default function Users({ users }: UserProps) {
           <span>Filtrar por:</span>
           {typeButton.map((type) => (
             <a
+              data-testid={`button_${type.type}_filter`}
               className={
                 type.status ? `${style.status_button_active}` : `${style.status_button_inactive}`
               }

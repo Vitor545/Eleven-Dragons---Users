@@ -20,7 +20,7 @@ export default function Text({ name, email, status }: IUser) {
   })`
 
   return (
-    <div className={style.card}>
+    <div className={style.card} data-testid={`card_home_container`}>
       <div className={style.card_status}>
         <div className={style[statusUser]}></div>
         <span>{status_verify[status as any]}</span>

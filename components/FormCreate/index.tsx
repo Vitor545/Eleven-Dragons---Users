@@ -120,7 +120,12 @@ export default function FormCreate() {
     <section className={style.form}>
       <div className={`container ${style.form_container}`}>
         <div>
-          <form action="" onSubmit={(e) => e.preventDefault()} className={style.form_main}>
+          <form
+            action=""
+            onSubmit={(e) => e.preventDefault()}
+            className={style.form_main}
+            data-testid={'form_create'}
+          >
             <div className={style.form_header}>
               <h2>Cadastre um novo usuário</h2>
               <p>Se cadastre agora e faça parte do nosso time</p>
@@ -131,6 +136,7 @@ export default function FormCreate() {
                 <input
                   type="text"
                   id="name"
+                  data-testid={'form_create_input_name'}
                   onChange={onChange}
                   className={classInput[nameInput]}
                 />
@@ -143,6 +149,7 @@ export default function FormCreate() {
                 <input
                   type="text"
                   id="email"
+                  data-testid={'form_create_input_email'}
                   onChange={onChange}
                   className={classInput[emailInput]}
                 />
@@ -154,11 +161,19 @@ export default function FormCreate() {
                 Status
                 <div className={style.button_types}>
                   <input type="radio" name="active" id="active" onClick={isClick} />
-                  <label htmlFor="active" className="btn_radio">
+                  <label
+                    htmlFor="active"
+                    className="btn_radio"
+                    data-testid={'form_create_button_status_active'}
+                  >
                     ATIVO
                   </label>
                   <input type="radio" name="active" id="inactive" onClick={isClick} />
-                  <label htmlFor="inactive" className="btn_radio">
+                  <label
+                    htmlFor="inactive"
+                    className="btn_radio"
+                    data-testid={'form_create_button_status_inactive'}
+                  >
                     INATIVO
                   </label>
                 </div>
@@ -168,7 +183,7 @@ export default function FormCreate() {
               </label>
             </div>
             <div className={style.button_form}>
-              <button onClick={onClick} className="btn">
+              <button onClick={onClick} className="btn" data-testid={'form_create_button'}>
                 CRIAR
               </button>
             </div>
