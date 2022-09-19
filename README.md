@@ -48,7 +48,7 @@ Foi uma aplicação muito legal de se fazer e espero que goste, o link para o Fr
 <h3 align='center'> 🌎 Rodando no navegador</h3>
 
 - Você pode clicar no link para ser redirecionado ao site:
-[Eleven Dragon Users]()
+[Eleven Dragon Users](https://elevendragons.netlify.app/)
 
 
 <br/>
@@ -98,6 +98,6 @@ npm run dev
  Abaixo você pode ter uma previa de como ficou a aplicação.
 
 - Você pode clicar no link para ser redirecionado ao site:
-[Youtube]()
+[Youtube](https://www.youtube.com/watch?v=Xikaz7F7J2Y)
 
 
