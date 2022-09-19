@@ -1,34 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Projeto Eleven Dragons Users
+ 
+<h3 align='center'> 💙 Pessoas, Usuarios, Amigos </h3>
 
-## Getting Started
+## 📄 Contexto
 
-First, run the development server:
+**Olá usuário, está perdido?** Nesse projeto eu criei uma aplicação `de busca e criação de usuário, testada e responsiva`. Tudo isso com o uso de tecnologias como `Next, React, Redux, Typescript, RTL, Eslint, SASS , Jest e muito mais`. Foi um projeto desafiador, pois houve `uso de várias técnicas de Redux, além de ser um aplicação com bastante animações, ser em next e testada`. Além disso, foi usado `Hooks e Padrões de commits
+Foi uma aplicação muito legal de se fazer e espero que goste, o link para o Front End`.
+[Front-End](https://github.com/Vitor545/mks-frontend-challenge/tree/vitor-souza-da-silva-mks)
+<br />
+
+
+<div>
+<img width=100% src="videoPage.gif"></img>
+</div>
+
+<br/>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+## 👨‍💻 Tecnologia utilizadas
+
+<p align='center'>
+  <img src='https://img.shields.io/badge/Typescript-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/React-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Hooks-red?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Bibliotecas-brown?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Git-black?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/GitHub-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/css-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/html-orange?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/sass-pink?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/React Testing Library-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Redux-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/eslint-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/jest-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/next-black?style=for-the-badge' />
+
+</p>
+
+<br/>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h3 align='center'> 🌎 Rodando no navegador</h3>
+
+- Você pode clicar no link para ser redirecionado ao site:
+[Eleven Dragon Users]()
+
+
+<br/>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+<h3 align='center'> 💿 Rodando na sua máquina</h3>
+
+
+## ⬇️ Instalações necessárias
+
+- Para executar com sucesso o projeto é necessário instalar o GIT:
+[GIT](https://git-scm.com/downloads)
+
+- Para executar com sucesso o projeto é necessário instalar o Node.js:
+[Node.js](https://nodejs.org/en/download/)
+
+<br/>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+## ▶️ Executar a aplicação
+
+**Para executar a aplicação em sua máquina local basta escolher uma pasta no seu computador e seguir os seguintes comandos no terminal do seu computador.**
+**Lembrando que é preciso configurar as variaveis de ambiente na sua maquina**
+
+📋 Copie as linhas de código e cole no terminal.
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone git@github.com:Vitor545/Eleven-Dragons---Users.git
+cd Eleven-Dragons---Users
+npm i
+npm run dev 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📄 Video apresentando o projeto
 
-## Learn More
+ Abaixo você pode ter uma previa de como ficou a aplicação.
 
-To learn more about Next.js, take a look at the following resources:
+- Você pode clicar no link para ser redirecionado ao site:
+[Youtube]()
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
