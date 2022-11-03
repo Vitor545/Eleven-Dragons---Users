@@ -6,11 +6,11 @@ import Hero from '../Hero'
 import TextInfinite from '../TextInfinite'
 import Users from '../Users'
 import { RootState } from '../../store'
-import { asyncGetUsers } from '../../store/Users.store'
 import Loading from '../Loading.tsx'
 import IUser from '../../types/User.interface'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
+import { getUsers } from '../../store/Users.store'
 
 export default function HomePage() {
   const dispatch = useDispatch()
@@ -20,8 +20,8 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const getUsers = () => dispatch(asyncGetUsers())
-    getUsers()
+    const getUser = () => dispatch(getUsers() as any)
+    getUser()
     setIsLoading(false)
   }, [])
 
